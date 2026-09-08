@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Panel • College Event Tracker</title>
+  <link rel="stylesheet" href="./css/styles.css"/>
+</head>
+<body class="bg">
+  <header class="topbar">
+    <div class="brand">Admin Panel</div>
+    <nav class="nav">
+      <a href="./index.html">Events</a>
+      <button id="btnLogout" class="btn danger small">Logout</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="h1">Dashboard</h1>
+
+    <section class="cards">
+      <div class="card kpi"><div class="kpi-num" id="kpiUsers">0</div><div class="kpi-label">Total Users</div></div>
+      <div class="card kpi"><div class="kpi-num" id="kpiEvents">0</div><div class="kpi-label">Active Events</div></div>
+      <div class="card kpi"><div class="kpi-num" id="kpiRegs">0</div><div class="kpi-label">Registrations</div></div>
+    </section>
+
+    <section class="grid2 gap">
+      <div class="card">
+        <h3>Add / Update Event</h3>
+        <input id="evId" class="input" placeholder="(leave empty to add new)"/>
+        <label>Title <input id="evTitle" class="input"/></label>
+        <div class="grid2">
+          <label>Date <input id="evDate" type="date" class="input"/></label>
+          <label>Department
+            <select id="evDept" class="input"><option>CSE</option><option>ECE</option><option>EEE</option><option>BCA</option><option>MBA</option></select>
+          </label>
+        </div>
+        <label>Venue <input id="evVenue" class="input"/></label>
+        <div class="row">
+          <button id="btnSaveEvent" class="btn">Save</button>
+          <button id="btnDeleteEvent" class="btn danger">Delete</button>
+          <button id="btnClearEvent" class="btn ghost">Clear</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Pending Faculty Requests</h3>
+        <div id="facultyReq"></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>All Events</h3>
+      <div id="adminEvents"></div>
+    </section>
+  </main>
+  <script type="module" src="./js/admin.js"></script>
+</body>
+</html>

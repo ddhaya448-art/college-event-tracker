@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register • College Event Tracker</title>
+  <link rel="stylesheet" href="./css/styles.css"/>
+</head>
+<body class="bg">
+  <main class="auth-wrap">
+    <section class="auth-card">
+      <h2>Create Account</h2>
+      <div class="grid2">
+        <label>Full Name
+          <input id="name" class="input"/>
+        </label>
+        <label>College Email
+          <input id="email" class="input" placeholder="yourname@yourcollege.ac.in"/>
+        </label>
+      </div>
+      <div class="grid2">
+        <label>Password
+          <input id="password" type="password" class="input"/>
+        </label>
+        <label>Role
+          <select id="role" class="input">
+            <option value="student">Student</option>
+            <option value="faculty">Faculty (request access)</option>
+          </select>
+        </label>
+      </div>
+      <button id="btnSignUp" class="btn primary wide">Create Account</button>
+      <p class="hint">Faculty accounts need admin approval before creating/updating events.</p>
+      <p class="small">Already have an account? <a href="./login.html">Login</a></p>
+    </section>
+  </main>
+
+  <script type="module" src="./js/auth-register.js"></script>
+</body>
+</html>

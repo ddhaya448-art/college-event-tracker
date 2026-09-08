@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>College Event Tracker • Events</title>
+  <link rel="stylesheet" href="./css/styles.css"/>
+</head>
+<body class="bg">
+  <header class="topbar">
+    <div class="brand">Sri Krishna <span>Arts & Science College</span></div>
+    <nav class="nav">
+      <a href="./login.html" id="navLogin">Login</a>
+      <a href="./my-registrations.html" id="navMy">My Registrations</a>
+      <a href="./admin.html" id="navAdmin">Admin</a>
+      <button id="btnLogout" class="btn danger small">Logout</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="h1">Upcoming Events <span id="eventCount" class="pill">0</span></h1>
+
+    <section class="filters">
+      <input id="searchText" type="text" placeholder="Search events..." class="input"/>
+      <input id="fromDate" type="date" class="input"/>
+      <input id="toDate" type="date" class="input"/>
+      <select id="deptFilter" class="input">
+        <option value="">All Departments</option>
+        <option>CSE</option><option>ECE</option><option>BCA</option>
+        <option>MBA</option><option>EEE</option><option>Mech</option>
+      </select>
+      <button id="btnSearch" class="btn">Search</button>
+      <button id="btnReset" class="btn ghost">Reset</button>
+    </section>
+
+    <section id="eventsList" class="list"></section>
+  </main>
+
+  <!-- Register Modal -->
+  <div id="registerModal" class="modal hidden">
+    <div class="modal-box">
+      <div class="modal-head">
+        <h3>Register for: <span id="regEventTitle"></span></h3>
+        <button id="closeModal" class="icon">&times;</button>
+      </div>
+      <div class="grid2">
+        <label>Full Name
+          <input id="regName" class="input" placeholder="Your name"/>
+        </label>
+        <label>Roll Number
+          <input id="regRoll" class="input" placeholder="e.g., 21CSE001"/>
+        </label>
+      </div>
+      <div class="grid2">
+        <label>Department
+          <select id="regDept" class="input">
+            <option>CSE</option><option>ECE</option><option>EEE</option>
+            <option>BCA</option><option>MBA</option><option>ME</option>
+          </select>
+        </label>
+        <label>Year
+          <select id="regYear" class="input">
+            <option>1st</option><option>2nd</option><option>3rd</option><option>4th</option>
+          </select>
+        </label>
+      </div>
+      <div class="modal-actions">
+        <button id="btnDoRegister" class="btn primary">Confirm Registration</button>
+      </div>
+      <p id="regHelp" class="hint">You must be logged in with your college email to register.</p>
+    </div>
+  </div>
+
+  <!-- JS (modules) -->
+  <script type="module" src="./js/events.js"></script>
+</body>
+</html>

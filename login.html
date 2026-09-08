@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Login • College Event Tracker</title>
+  <link rel="stylesheet" href="./css/styles.css"/>
+</head>
+<body class="bg">
+  <main class="auth-wrap">
+    <section class="auth-card">
+      <h2>Student Login</h2>
+      <label>Email
+        <input id="email" class="input" placeholder="yourname@yourcollege.ac.in"/>
+      </label>
+      <label>Password
+        <input id="password" type="password" class="input" placeholder="••••••••"/>
+      </label>
+      <button id="btnLogin" class="btn primary wide">Login</button>
+      <p class="small">
+        Don't have an account?
+        <a href="./register.html">Register</a>
+      </p>
+      <hr/>
+      <p class="small">Faculty? Please <a href="./register.html?role=faculty">request access</a>.</p>
+    </section>
+  </main>
+
+  <script type="module" src="./js/auth-login.js"></script>
+</body>
+</html>
